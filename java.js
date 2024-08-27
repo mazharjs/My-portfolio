@@ -33,6 +33,8 @@ function sendMail() {
     email : document.getElementById("email").value,
     message : document.getElementById("message").value,
 }
-emailjs.send("service_fr8tjsp","template_rv1s5nu",params).then(alert("Email send..!"))
+emailjs.send("service_fr8tjsp","template_rv1s5nu",params).then(function(res){
+  alert("Email sent sucessfully..!")
+})
 }
 
