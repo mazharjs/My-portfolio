@@ -6,7 +6,7 @@
 }
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* courser */
@@ -81,8 +81,81 @@ body {
   box-shadow: 0 2px 5px 0 #28e98c, 0 2px 5px 0 #28e98c inset,
     0 2px 5px 0 #28e98c, 0 2px 5px 0 #28e98c inset;
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo h3 {
+    font-size: 20px;
+    padding-top: 4px;
+  }
+
+  .cont1 ul li {
+    padding-left: 10px !important;
+  }
+
+  .btn-1 {
+    width: 120px;
+    height: 30px !important;
+  }
+
+  .navbar-collapse {
+    max-height: 400px;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .cont-2 {
+    justify-content: center !important;
+  }
+
+  /* Ensure navbar items are visible when expanded */
+  .navbar-collapse.show {
+    display: block !important;
+  }
+
+  .navbar-nav li {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h3 {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+
+  .cont1 ul li {
+    padding-left: 5px !important;
+  }
+
+  .btn-1 {
+    width: 100px;
+    height: 28px !important;
+  }
+
+  .navbar-collapse {
+    max-height: 300px;
+  }
+
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    padding: 0;
+  }
+
+  .navbar-nav li {
+    padding: 8px 0;
+  }
+}
 
 /* ----button style end------ */
+/* Global Styles */
 .width {
   width: 100%;
 }
@@ -110,41 +183,165 @@ body {
 .padding-t-5 {
   padding-left: 5px !important;
 }
-/* ------banner style start---- */
+
+/* Banner Styles */
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+.bnr-txt {
+  flex: 1;
+  margin-top: 7%;
+}
+
 .text-colour {
   color: #28e98c;
   font-weight: bolder;
 }
-.para1 {
-  padding-top: 20%;
-  font-size: 30px;
-  margin-bottom: -0.5%;
-  font-weight: 600;
-}
-.para2 {
-  font-size: 30px;
-}
-.hed-1 {
-  font-size: 60px;
-}
-#img1 {
-  display: flex;
-  padding-left: 32%;
-  border: #04fa83;
-}
-.bnr-txt {
-  margin-top: 7%;
-}
-/* -----banner style end--- */
 
+.para1 {
+  font-size: 2rem; /* Use rem units for scalability */
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  padding-top: 20%;
+}
+
+.para2 {
+  font-size: 1.5rem;
+}
+
+.hed-1 {
+  font-size: 3.75rem;
+}
+
+/* Banner Image */
+.img-bnr {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img1 {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .para1, .para2, .hed-1 {
+    font-size: 1.5rem;
+  }
+
+  .hed-1 {
+    font-size: 2.5rem;
+  }
+
+  #img1 {
+    width: 80%; /* Scale image width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .para1, .para2, .hed-1 {
+    font-size: 1.2rem;
+  }
+
+  .hed-1 {
+    font-size: 2rem;
+  }
+
+  #img1 {
+    width: 90%; /* Further scale image width on very small screens */
+  }
+}
+
+/* -----banner style end--- */
+/* Experience Section Styles */
+.experience {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  align-items: baseline;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.exp-1,
+.exp2 {
+  /* flex: 1; Ensures the items take up equal space */
+  text-align: center;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.exp-1 {
+  margin-right: 10px;
+}
+
+.exp2 {
+  margin-left: 10px;
+}
+
+/* Style for experience labels */
 .expclr {
   color: #04fa83;
   font-size: 60px;
 }
-.experience {
-  padding: 0px 35px;
+
+.experience p {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 10px 0 0;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-1,
+  .exp2 {
+    margin: 10px 0;
+    width: 100%; /* Ensures full width on smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .expclr {
+    font-size: 50px;
+  }
+
+  .experience p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expclr {
+    font-size: 40px;
+  }
+
+  .experience p {
+    font-size: 14px;
+  }
+}
+
 /* ------about section----- */
+/* -----about section----- */
 .btn-about {
   margin-bottom: 50px;
   margin-top: 30px;
@@ -154,10 +351,49 @@ body {
   border-radius: 20px;
   padding: 4px 27px;
 }
+
 .btn-about a {
   text-decoration: none;
   color: #ffff;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-about {
+    padding: 8px 20px; /* Adjust padding for medium screens */
+    font-size: 14px; /* Slightly smaller font size */
+    margin-top: 20px; /* Adjust margin for medium screens */
+    margin-bottom: 30px; /* Adjust margin for medium screens */
+  }
+
+  .container h1 {
+    font-size: 28px; /* Adjust font size for medium screens */
+  }
+
+  .container p {
+    font-size: 14px; /* Adjust font size for medium screens */
+    padding: 0 15px; /* Provide horizontal padding for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-about {
+    padding: 6px 15px; /* Further adjust padding for smaller screens */
+    font-size: 12px; /* Smaller font size for smaller screens */
+    margin-top: 15px; /* Further adjust margin for smaller screens */
+    margin-bottom: 20px; /* Further adjust margin for smaller screens */
+  }
+
+  .container h1 {
+    font-size: 24px; /* Smaller font size for smaller screens */
+  }
+
+  .container p {
+    font-size: 12px; /* Smaller font size for smaller screens */
+    padding: 0 10px; /* Further adjust padding for smaller screens */
+  }
+}
+
 /* ------about section end----- */
 /* ------resume section----- */
 .resume {
