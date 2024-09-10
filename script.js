@@ -48,3 +48,21 @@ setTimeout(function() {
     $(".loader-wrapper").fadeOut(200);  // Fallback in case the load event doesn't trigger
   }
 }, 5000);  // Force fade out after 5 seconds
+
+
+
+
+
+
+
+
+
+
+
+const typed = new Typed('.multiple-text',{
+  strings:['BSCS Student at IQRA University ','Frontend developer'],
+  typeSpeed:100,
+  backSpeed:100,
+  backDelay:1000,
+  loop:true
+});

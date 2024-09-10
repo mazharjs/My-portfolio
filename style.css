@@ -178,6 +178,7 @@ button.navbar-toggler {
 }
 .GLD-L {
   align-items: center;
+  margin-top: 40px;
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -319,6 +320,8 @@ button.navbar-toggler {
 
 .para2 {
   font-size: 1.5rem;
+  line-height: 5px;
+  font-weight: 600;
 }
 
 .hed-1 {
