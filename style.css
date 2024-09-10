@@ -4,6 +4,87 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif !important;
 }
+/* -----pre loader style start---- */
+.loader-wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  /* top: 50%; */
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+
+
+
+/* ------pre loader style end---- */
 button.navbar-toggler {
   background-color: #565656 !important;
 }
@@ -82,6 +163,10 @@ button.navbar-toggler {
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .navbar-nav{
+    /* display: block; */
+    position: fixed;
+  }
   .logo h3 {
     font-size: 20px;
     padding-top: 4px;
@@ -122,6 +207,10 @@ button.navbar-toggler {
 }
 
 @media (max-width: 480px) {
+  .btn-1 {
+    width: 132px;
+    height: 35px !important;
+}
   .logo h3 {
     font-size: 16px;
     padding-top: 2px;

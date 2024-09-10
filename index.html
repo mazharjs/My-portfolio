@@ -29,12 +29,14 @@
     rel="stylesheet"
 />
 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="bg-blackk">
-  
+
   <!-- navbar start -->
-  <header>
+  <header >
     <nav class="navbar navbar-expand-lg navbar-light bg-blackk " >
       <div class="container-fluid cont1">
         <div class="logo  animate__animated animate__fadeInLeft ">
@@ -331,7 +333,7 @@
   <div class="container d-flex ">
     <div class="card mb-3 bg-blackk width-c wow animate__animated animate__fadeInUp">
       <img src="./assets/cloning website.jpg " class="card-img-top height-c" alt="...">
-      <a href="" class="td-non">
+      <a href="https://github.com/mazharjs/Salt-n-Paper/tree/main/saltnpeeper3-main" class="td-non">
       <div class="card-body c-m color-w">
         <h5 class="card-title"><span class="text-colour">Salt'n Paper Clone</span></h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -397,13 +399,21 @@
                     <textarea name="message" id="message" required placeholder="Write your message" class="contact__form-input txt-a"></textarea>
                 </div>
                 <p class="contact__message" id="contact-message"></p>
-                <button class="button contact__button" type="submit" onclick="sendMail()">Send Message</button>
+                <button class="button contact__button" type="submit" onclick="sendEmail()">Send Message</button>
             </form>
         </div>
     </div>
 </section>
-
+</div>
   <!-- /* ------Contact  section  end----- */ -->
+
+     <!-- pre loader -->
+     <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+
+    
   <!-- -------java script links----- -->
 
 <!-- WOW.js -->
@@ -429,8 +439,13 @@ publicKey: "4nKNiNLwz2VBkatqF",
 
     <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/fadfd08888.js" crossorigin="anonymous"></script>
+
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
   <script src="./script.js"></script>
+
+
 </body>
 
 </html>
