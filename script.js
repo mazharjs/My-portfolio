@@ -32,12 +32,7 @@ function sendEmail(event) {
 // Attach the sendEmail function to the form's submit event
 document.getElementById("contact-form").addEventListener("submit", sendEmail);
 
-// $(document).ready(function() {
-//   $(window).on("load", function() {
-//     $(".loader-wrapper").fadeOut("100");
-//   });
-// });
-
+// pre loader
 
 $(window).on("load", function() {
   $(".loader-wrapper").fadeOut(200);
@@ -49,20 +44,29 @@ setTimeout(function() {
   }
 }, 5000);  // Force fade out after 5 seconds
 
-
-
-
-
-
-
-
-
-
-
+// autotype
 const typed = new Typed('.multiple-text',{
   strings:['BSCS Student at IQRA University ','Frontend developer'],
   typeSpeed:100,
   backSpeed:100,
   backDelay:1000,
   loop:true
+});
+
+// counter effect
+$(document).ready(function() {
+  $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+  });
+});
+
+
+locoScroll.on('call', function(func, way, obj) {
+  if (func === 'counter' && way === 'enter') {
+      $('.counter').counterUp({
+          delay: 1000,
+          time: 2000
+      });
+  }
 });
