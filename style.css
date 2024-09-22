@@ -1182,6 +1182,7 @@ input {
   background-color: #28e98c;
 }
 
+
 /* Back to top button */
 .back-to-top {
 	position: fixed;
@@ -1191,16 +1192,26 @@ input {
 	align-items: center;
 	justify-content: center;
 	border: 2px solid #565656;
-	border-radius: 2.5rem;
-	padding: 0.5rem;
+	border-radius: 50%;  /* Make the border fully rounded */
+	width: 3.5rem;  /* Set width for round button */
+	height: 3.5rem; /* Set height for round button */
 	text-decoration: none;
+	transition: 0.2s ease-out;
+	padding: 0; /* Reset padding to keep it round */
+}
+
+.material-icons i {
+	color: #565656;
+}
+
+.back-to-top span {
+	color: #fff;
+	font-size: 2rem; /* Adjust font size if necessary */
 	transition: 0.2s ease-out;
 }
 
-.back-to-top .material-icons {
-	color: #565656;
-	font-size: 3rem;
-	transition: 0.2s ease-out;
+.material-icons i:hover {
+	color: #1f1f1f;
 }
 
 .back-to-top:hover {
@@ -1208,20 +1219,20 @@ input {
 	border: none;
 }
 
-.back-to-top:hover .material-icons {
-	color: #1f1f1f;
+.back-to-top:hover span {
 	transform: translateY(-4px);
 }
 
-/* Responsive design for mobile screens */
+/* Responsive for mobile screens */
 @media (max-width: 640px) {
   .back-to-top {
     bottom: 1rem;
     right: 1rem;
-    padding: 0.25rem; /* Smaller padding on mobile */
+    width: 2.5rem; /* Reduce size for mobile */
+    height: 2.5rem; /* Reduce size for mobile */
   }
-
-  .back-to-top .material-icons {
-    font-size: 2rem; /* Smaller icon size */
+  
+  .back-to-top span {
+    font-size: 1.5rem; /* Adjust font size for mobile */
   }
 }
